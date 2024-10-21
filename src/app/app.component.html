@@ -1,9 +1,12 @@
 <app-header />
 
 <main>
- <app-input (calculate)="onCalculateInvestmentResults($event)"/>
- <!-- with signals -->
- <app-investment-results [results]="resultsData()"/>
- <!-- <app-investment-results [results]="resultsData"/> -->
- <!-- without signal -->
+  <app-input />
+  <app-investment-results />
+  <!-- If not using a service -->
+  <!-- <app-input (calculate)="onCalculateInvestmentResults($event)"/> -->
+  <!-- with signals -->
+  <!-- <app-investment-results [results]="resultsData()"/> -->
+  <!-- <app-investment-results [results]="resultsData"/> -->
+  <!-- without signal -->
 </main>
