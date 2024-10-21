@@ -1,0 +1,20 @@
+component that takes in a form and returns calculations
+
+component
+form
+titles: INITIAL INVESTMENT, ANNUAL INVESTMENT, EXPECTED RETURN, DURATION
+input boxes
+
+form submission button
+
+
+investment RESULTS
+
+form
+title: YEAR, INVESTMENT VALUE INTEREST (YEAR), TOTAL INTEREST INVESTED CAPITAL
+
+types are all string
+
+
+service 
+model 
