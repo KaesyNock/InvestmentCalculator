@@ -3,22 +3,24 @@ import { Component } from "@angular/core";
 
 // import { InvestmentInput } from '../investment-input.model';
 
-import { HeaderComponent } from './header/header.component';
-import { InputComponent } from './user-input/user-input.component';
-import { InvestmentResultsComponent } from './investment-results/investment-results.component';
+// import { HeaderComponent } from './header/header.component';
+// import { InputComponent } from './user-input/user-input.component';
+// import { InvestmentResultsComponent } from './investment-results/investment-results.component';
 
 
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    AppComponent,
-    HeaderComponent,
-    InputComponent,
-    InvestmentResultsComponent,
+  // standalone: true,
+  // imports: [
+  //   AppComponent,
+  //   HeaderComponent,
+  //   InputComponent,
+  //   InvestmentResultsComponent,
 
-  ],
+  // ],
+
+  //standalone method
   templateUrl: './app.component.html',
 })
 export class AppComponent {}

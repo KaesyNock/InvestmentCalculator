@@ -1,4 +1,5 @@
 import { Component, Input, signal } from "@angular/core";
+import { NgModel } from "@angular/forms";
 // EventEmitter, Output only need to be imported if you're not using signals
 // output only needed if you don't have a service in this case
 import { FormsModule } from "@angular/forms";
@@ -8,8 +9,8 @@ import { InvestmentService } from "../../investment.service"
 
 @Component({
 selector: 'app-input',
-standalone: true,
-imports: [FormsModule],
+// standalone: true,
+// imports: [FormsModule],
 templateUrl: './user-input.component.html',
 styleUrl: './user-input.component.css',
 })
