@@ -6,15 +6,24 @@ import type { InvestmentInput } from "./investment-input.model";
 //decorator passing an object provided at root, lets Angular inject that service and components can request service to be injected
 
 export class InvestmentService {
+  resultData = signal<{
+    year: number;
+    interest: number;
+    valueEndOfYear: number;
+    annualInvestment: number;
+    totalInterest: number;
+    totalAmountInvested: number;
+  }[] | undefined>(undefined);
 
-  resultsData?:{
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
-    totalAmountInvested: number
-    }[];
+  //not required as a result of the Service
+  // resultsData?:{
+  //   year: number,
+  //   interest: number,
+  //   valueEndOfYear: number,
+  //   annualInvestment: number,
+  //   totalInterest: number,
+  //   totalAmountInvested: number
+  //   }[];
 
   calculateInvestmentResults(data: InvestmentInput) {
     const {initialInvestment, duration, expectedReturn, annualInvestment} = data;
@@ -38,8 +47,8 @@ export class InvestmentService {
     }
 
     //without signal
-    this.resultsData = annualData;
-    // this.resultsData.set(annualData);
+    // this.resultData() = annualData;
+    this.resultData.set(annualData);
     //with signal
   }
 }

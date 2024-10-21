@@ -17,7 +17,7 @@
     <tbody>
       <!-- @for to loop through results -->
        <!-- @for (result of results; track result.year) { non signal approach -->
-        @for (result of results; track result.year) {
+        @for (result of results(); track result.year) {
         <tr>
           <td>{{result.year }}</td>
           <td>{{result.valueEndOfYear | currency}}</td>
