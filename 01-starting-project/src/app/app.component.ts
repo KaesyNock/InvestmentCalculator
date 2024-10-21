@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { InvestmentInput } from '../investment-input.model';
 
@@ -22,14 +22,25 @@ import { InvestmentResultsComponent } from './investment-results/investment-resu
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  resultsData?:  {
+  resultsData = signal<{
     year: number,
     interest: number,
     valueEndOfYear: number,
     annualInvestment: number,
     totalInterest: number,
     totalAmountInvested: number
-  }[];
+    }[]| undefined>(undefined);
+
+  //WITHOUT SIGNALS
+  // resultsData?:  {
+  //   year: number,
+  //   interest: number,
+  //   valueEndOfYear: number,
+  //   annualInvestment: number,
+  //   totalInterest: number,
+  //   totalAmountInvested: number
+  // }[];
+  //signals can manage state that is changing
 
   //copied without function keyword
 
@@ -56,6 +67,8 @@ export class AppComponent {
       });
     }
 
-    this.resultsData = annualData;
+    // this.resultsData = annualData; with signal
+    this.resultsData.set(annualData);
+    //with signal 
   }
 }

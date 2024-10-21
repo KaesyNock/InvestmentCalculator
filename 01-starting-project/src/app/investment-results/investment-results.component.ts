@@ -14,14 +14,24 @@ import { InvestmentInput, AnnualData } from '../../investment-input.model';
 })
 
 export class InvestmentResultsComponent {
-  // results = input<...>() signal
-
-  @Input() results?: {
+  results = input<{
     year: number,
     interest: number,
     valueEndOfYear: number,
     annualInvestment: number,
     totalInterest: number,
     totalAmountInvested: number
-  }[];
-}
+  }[]>();
+  }
+
+  //manual
+  // @Input() results?: {
+  //   year: number,
+  //   interest: number,
+  //   valueEndOfYear: number,
+  //   annualInvestment: number,
+  //   totalInterest: number,
+  //   totalAmountInvested: number
+  // }[];
+  // }
+
